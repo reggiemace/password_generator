@@ -14,7 +14,7 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   // Prompt user to enter the correct length for the pass word
   var length = prompt(
-    "Please enter the length for you Password. Password should be 8 to 128 characters"
+    "Please enter the length for your Password. Password should be 8 to 128 characters"
   );
   // length of at least 8 characters and no more than 128 characters
   if (length < 8 || length > 128) {
