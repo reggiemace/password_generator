@@ -17,6 +17,7 @@ function generatePassword() {
     "Please enter the length for your Password. Password should be 8 to 128 characters"
   );
   // length of at least 8 characters and no more than 128 characters
+  var confirmCriteria = [];
   if (length < 8 || length > 128) {
     alert("Must be a number from 8 to 128");
     generatePassword();
@@ -42,6 +43,13 @@ function generatePassword() {
     );
     generatePassword();
   } else {
+    confirmCriteria.push(gotLower);
+    confirmCriteria.push(gotUpper);
+    confirmCriteria.push(gotSymbol);
+    confirmCriteria.push(gotNumbers);
+
+    console.log(confirmCriteria);
+
     // Define the criteria for random password.
     const criteria =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*(){}[]|<>0123456789";
